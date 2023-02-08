@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1675814210663" clover="3.2.0">
+  <project timestamp="1675814210663" name="All files">
+    <metrics statements="8" coveredstatements="8" conditionals="10" coveredconditionals="5" methods="3" coveredmethods="3" elements="21" coveredelements="16" complexity="0" loc="8" ncloc="8" packages="2" files="2" classes="2"/>
+    <package name="KataRPGCombat">
+      <metrics statements="6" coveredstatements="6" conditionals="10" coveredconditionals="5" methods="2" coveredmethods="2"/>
+      <file name="App.tsx" path="/Users/martincouso/Documents/Projects/KataRPGCombat/App.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="10" coveredconditionals="5" methods="2" coveredmethods="2"/>
+        <line num="33" count="4" type="stmt"/>
+        <line num="34" count="4" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="99" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="KataRPGCombat.src.features">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Character.tsx" path="/Users/martincouso/Documents/Projects/KataRPGCombat/src/features/Character.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
