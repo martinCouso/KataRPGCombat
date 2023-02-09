@@ -1,5 +1,5 @@
 import React from 'react';
-import {render, screen, within} from '@testing-library/react-native';
+import {render, screen, within, fireEvent} from '@testing-library/react-native';
 import Character from '../src/features/Character';
 
 describe('Kata Step 1', () => {
@@ -24,5 +24,37 @@ describe('Kata Step 1', () => {
     const {getByText} = within(screen.getByTestId('status'));
 
     expect(getByText('alive')).toBeTruthy();
+  });
+
+  it('character receive damage', () => {
+    render(<Character />);
+    const {getByText} = within(screen.getByTestId('health-points'));
+    expect(getByText('1000hp')).toBeTruthy();
+
+    const dmgButton = screen.getByTestId('receiveDamage');
+    fireEvent.press(dmgButton);
+
+    expect(getByText('900hp')).toBeTruthy();
+  });
+
+  it('should be dead', () => {
+    render(<Character />);
+    const {getByText} = within(screen.getByTestId('status'));
+    expect(getByText('alive')).toBeTruthy();
+
+    const dmgButton = screen.getByTestId('receiveDamage');
+
+    fireEvent.press(dmgButton);
+    fireEvent.press(dmgButton);
+    fireEvent.press(dmgButton);
+    fireEvent.press(dmgButton);
+    fireEvent.press(dmgButton);
+    fireEvent.press(dmgButton);
+    fireEvent.press(dmgButton);
+    fireEvent.press(dmgButton);
+    fireEvent.press(dmgButton);
+    fireEvent.press(dmgButton);
+
+    expect(getByText('dead')).toBeTruthy();
   });
 });
